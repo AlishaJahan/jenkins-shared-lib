@@ -4,7 +4,7 @@ def call(Map config = [:]) {
     def dockerfile  = config.get('dockerfile', 'Dockerfile')
     def buildContext = config.get('context', '.')
 
-    echo "🔨 Building Docker image '${imageName}:${imageTag}' using Dockerfile: ${dockerfile}"
+    echo "Building Docker image '${imageName}:${imageTag}' using Dockerfile: ${dockerfile}"
 
     sh """
         docker build \\
